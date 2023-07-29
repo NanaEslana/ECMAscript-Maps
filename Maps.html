@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula de Maps</title>
+</head>
+<body>
+    <script>
+            //Maps
+        let map = new Map();
+        function funcao(){
+
+        }
+        let objeto ={};
+
+        map.set("String","Sou uma String"); //Chaves
+        map.set(objeto,"Sou um objeto");
+        map.set(funcao,"Sou uma função.");
+
+        //Get reculpera os valores.
+
+        console.log(map.get("String"));//Procura a chave "String"
+        console.log(map.get(objeto));//Procura a chave objeto.
+        console.log(map.get(funcao));//Procura a chave função.
+
+        //Pra saber quatos itens o map tem ultilizamos a propriedade SIze.
+
+            console.log("Tamanhho é " + map.size); //Mostrar quantas chaves tem!
+
+        //Pra saber uma chave especificar,usamos o has.
+            console.log(map.has("String")); //Retorna Boolean (true ou false).
+
+        //Para deletar uma chave em especifico usamos o delete
+            map.delete("String");
+            console.log(map.has("string"))//Tem a chave String? retorna false por que foi deletada.
+
+        //Remover todos os registro do nosso map ultimilar o clear.
+            map.clear();
+            console.log("Tamanho é: " + map.size);
+
+        //Map é um objeto iteravel.
+
+        for(let chave of map.keys()){
+             console.log(chave);
+        }; //Retorna as chaves e os valores e todas as entras.
+
+        for(let valores of map.values()){
+            console.log(valores);
+        }//Retorna os valores dentro das chaves.
+
+        for(let entrada of map.entries()){
+             console.log(entrada);
+        } //Pode inteirar as entradas que são as chaves e os valores,mostrar os dois juntos.
+
+    </script>
+</body>
+</html>
